@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>week 4</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app-3">
+        <span v-if="seen">HI sri lankan people</span>
+        <span v-else="seen">Hi Australian people</span>
+
+        <ol>
+            <li v-for="todo in todos">
+              {{ todo.text }}
+            </li>
+          </ol>
+      </div>
+
+      <script>
+          var app3 = new Vue({
+          el: '#app-3',
+          data: {
+          seen: true,
+          todos: [
+          { text: 'hellow java' },
+          { text: 'hellow Vue' },
+          { text: 'Build something awesome' }
+          ]
+        }
+        })
+      </script>
+</body>
+</html>
